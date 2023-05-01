@@ -7,7 +7,7 @@ const AuthDashboard: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Dashboard - NextJS App</title>
+        <title>Dashboard - {process.env.NEXT_PUBLIC_APP_NAME}</title>
       </Head>
       <p>hello world</p>
     </>

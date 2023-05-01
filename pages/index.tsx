@@ -7,11 +7,11 @@ import Head from "next/head";
 const Home: NextPageWithLayout = () => {
   return (
     <>
-    <Head>
-      <title>Home - NextJS App</title>
-    </Head>
+      <Head>
+        <title>Home - {process.env.NEXT_PUBLIC_APP_NAME}</title>
+      </Head>
 
-      <h2>Welcome to NextJS App</h2>
+      <h2>Welcome to {process.env.NEXT_PUBLIC_APP_NAME}</h2>
       <Link
         href="auth"
         className="text-blue-500 hover:underline hover:text-yellow-500"
