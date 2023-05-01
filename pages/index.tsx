@@ -8,7 +8,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Home - {process.env.NEXT_PUBLIC_APP_NAME}</title>
+        <title>{`Home - ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
       </Head>
 
       <h2>Welcome to {process.env.NEXT_PUBLIC_APP_NAME}</h2>
