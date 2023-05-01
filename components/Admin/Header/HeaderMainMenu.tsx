@@ -9,6 +9,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function HeaderMainMenu({
   mobileMenuOpenIs,
@@ -69,10 +70,12 @@ export default function HeaderMainMenu({
             <Dropdown.Item>
               <a href="#" className="flex py-3 px-4">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="w-11 h-11 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
                     alt="Jese image"
+                    width={44}
+                    height={44}
                   />
                   <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-blue-600 rounded-full border border-white dark:border-gray-800">
                     <svg
@@ -106,10 +109,12 @@ export default function HeaderMainMenu({
             <Dropdown.Item>
               <a href="#" className="flex py-3 px-4">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="w-11 h-11 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
                     alt="Joseph image"
+                    width={44}
+                    height={44}
                   />
                   <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-800">
                     <svg
@@ -143,10 +148,12 @@ export default function HeaderMainMenu({
             <Dropdown.Item>
               <a href="#" className="flex py-3 px-4">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="w-11 h-11 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
                     alt="Bonnie image"
+                    width={44}
+                    height={44}
                   />
                   <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-800">
                     <svg
@@ -184,10 +191,12 @@ export default function HeaderMainMenu({
             <Dropdown.Item>
               <a href="#" className="flex py-3 px-4">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="w-11 h-11 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
                     alt="Leslie image"
+                    width={44}
+                    height={44}
                   />
                   <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-800">
                     <svg
@@ -225,10 +234,12 @@ export default function HeaderMainMenu({
             <Dropdown.Item>
               <a href="#" className="flex py-3 px-4">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="w-11 h-11 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                     alt="Robert image"
+                    width={44}
+                    height={44}
                   />
                   <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-800">
                     <svg
