@@ -6,7 +6,7 @@ export default function HeaderBrand() {
   return (
     <>
       {/* brand */}
-      <Link href="/" className="flex items-center">
+      <Link href="auth" className="flex items-center">
         {/* an example to use logo */}
         {/* <img src="https://flowbite.com/docs/images/logo.svg" class="mr-2 h-7" alt="Logo" title="Logo" /> */}
         <FontAwesomeIcon
