@@ -12,6 +12,7 @@ import { faCircleDot } from "@fortawesome/free-regular-svg-icons";
 import SidebarLink from "./SidebarLink";
 import SidebarHeading from "./SidebarHeading";
 import { useRouter } from "next/router";
+import SidebarDropdown from "./SidebarDropdown";
 
 export default function Aside() {
   const router = useRouter();
@@ -26,39 +27,46 @@ export default function Aside() {
             href="/auth"
             active={router.route === "/auth"}
           />
-          <SidebarLink
-            name="Page"
-            icon={faFileLines}
-            dropdownIs={true}
-            active={false}
-          >
+          <SidebarDropdown name="Page" icon={faFileLines} active={false}>
             <>
-              <SidebarLink name="Blank" topLinkIs={false} active={false} />
               <SidebarLink
-                name="Auth"
+                name="Blank"
                 topLinkIs={false}
-                dropdownIs={true}
                 active={false}
-              >
+                href="/auth"
+              />
+              <SidebarDropdown name="Auth" topLinkIs={false} active={false}>
                 <>
                   <SidebarLink
                     name="Register"
                     icon={faCircleDot}
                     topLinkIs={false}
                     active={false}
+                    href="/auth"
                   />
                   <SidebarLink
                     name="Login"
                     icon={faCircleDot}
                     topLinkIs={false}
                     active={false}
+                    href="/auth"
                   />
                 </>
-              </SidebarLink>
-              <SidebarLink name="404 Error" topLinkIs={false} active={false} />
-              <SidebarLink name="500 Error" topLinkIs={false} active={false} />
+              </SidebarDropdown>
+              <SidebarLink
+                name="404 Error"
+                topLinkIs={false}
+                active={false}
+                href="/auth"
+              />
+              <SidebarLink
+                name="500 Error"
+                topLinkIs={false}
+                active={false}
+                href="/auth"
+              />
             </>
-          </SidebarLink>
+          </SidebarDropdown>
           <SidebarLink
             name="Forms"
             icon={faPenToSquare}
@@ -68,17 +76,39 @@ export default function Aside() {
               </span>
             }
             active={false}
+            href="/auth"
           />
-          <SidebarLink name="Tables" icon={faTableList} active={false} />
+          <SidebarLink
+            name="Tables"
+            icon={faTableList}
+            active={false}
+            href="/auth"
+          />
           <SidebarHeading title="Components" />
           <SidebarLink
             name="Alerts"
             icon={faTriangleExclamation}
             active={false}
+            href="/auth"
           />
-          <SidebarLink name="Buttons" icon={faToggleOff} active={false} />
-          <SidebarLink name="Cards" icon={faBarsStaggered} active={false} />
-          <SidebarLink name="Modals" icon={faCube} active={false} />
+          <SidebarLink
+            name="Buttons"
+            icon={faToggleOff}
+            active={false}
+            href="/auth"
+          />
+          <SidebarLink
+            name="Cards"
+            icon={faBarsStaggered}
+            active={false}
+            href="/auth"
+          />
+          <SidebarLink
+            name="Modals"
+            icon={faCube}
+            active={false}
+            href="/auth"
+          />
         </ul>
       </aside>
     </>
