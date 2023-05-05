@@ -4,14 +4,14 @@ import type { NextPageWithLayout } from "../_app";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAngleRight,
   faBagShopping,
   faCartShopping,
   faHome,
   faTruckFast,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+import Breadcrumb from "@/components/Admin/Breadcrumb/Breadcrumb";
+import BreadcrumbLink from "@/components/Admin/Breadcrumb/BreadcrumbLink";
 
 const AuthDashboard: NextPageWithLayout = () => {
   return (
@@ -19,41 +19,14 @@ const AuthDashboard: NextPageWithLayout = () => {
       <Head>
         <title>{`Dashboard - ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
       </Head>
-      {/* main content header */}
-      <div className="md:flex md:justify-between mb-6">
-        <div>
-          <h1 className="text-3xl sm:text-4xl text-slate-900 tracking-tight dark:text-slate-200">
-            Dashboard
-          </h1>
-        </div>
-        <div className="mt-3 md:mt-0">
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
-                <Link
-                  href="auth"
-                  className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                >
-                  <FontAwesomeIcon icon={faHome} />
-                  <span className="ml-2">Home</span>
-                </Link>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <FontAwesomeIcon
-                    icon={faAngleRight}
-                    className="text-slate-400"
-                  />
-                  <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">
-                    Dashboard
-                  </span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      {/* end of main content header */}
+
+      <Breadcrumb title="Dashboard">
+        <>
+          <BreadcrumbLink name="Home" icon={faHome} />
+          <BreadcrumbLink name="Dashboard" disabled />
+        </>
+      </Breadcrumb>
+
       <section className="mb-5">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-6/12 xl:w-3/12">
