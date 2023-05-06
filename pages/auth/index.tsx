@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import { type ReactElement } from "react";
 import AdminAuthLayout from "@/components/Layouts/AdminAuthLayout";
 import type { NextPageWithLayout } from "../_app";
 import Head from "next/head";
@@ -12,8 +12,40 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Breadcrumb from "@/components/Admin/Breadcrumb/Breadcrumb";
 import BreadcrumbLink from "@/components/Admin/Breadcrumb/BreadcrumbLink";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js/auto";
+import { Line, Doughnut } from "react-chartjs-2";
 
 const AuthDashboard: NextPageWithLayout = () => {
+  ChartJS.register(ArcElement, Tooltip, Legend);
+
+  const doughnutChart = {
+    labels: ["Delivered", "Canceled", "New"],
+    datasets: [
+      {
+        label: "Order Status",
+        data: [1040, 50, 370],
+        backgroundColor: [
+          "rgb(133, 105, 241)",
+          "rgb(164, 101, 241)",
+          "rgb(101, 143, 241)",
+        ],
+        hoverOffset: 4,
+      },
+    ],
+  };
+
+  const lineChart = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+      {
+        label: "Sales Report",
+        backgroundColor: "hsl(252, 82.9%, 67.8%)",
+        borderColor: "hsl(252, 82.9%, 67.8%)",
+        data: [0, 10, 5, 2, 20, 30, 45],
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -94,22 +126,24 @@ const AuthDashboard: NextPageWithLayout = () => {
           </div>
         </div>
       </section>
+
       <section className="mb-5 flex flex-wrap">
         <div className="overflow-hidden w-full lg:w-8/12 mb-5 lg:mb-0">
           <div className="bg-white dark:bg-white/5 text-slate-800 dark:text-slate-100 shadow rounded-lg mr-0 lg:mr-3">
             <div className="py-3 px-5 bg-gray-100 dark:bg-gray-400/10">
               Sales Report
             </div>
-            <canvas className="p-10" id="chartLine" />
+            <Line data={lineChart} />
           </div>
         </div>
         <div className="bg-white dark:bg-white/5 text-slate-800 dark:text-slate-100 shadow rounded-lg overflow-hidden w-full lg:w-4/12">
           <div className="py-3 px-5 bg-gray-100 dark:bg-gray-400/10">
             Order Report
           </div>
-          <canvas className="p-10" id="chartDoughnut" />
+          <Doughnut data={doughnutChart} />
         </div>
       </section>
+
       <section className="bg-white dark:bg-white/5 rounded shadow-lg p-3 mb-5">
         <h2
           data-docsearch-ignore="true"
