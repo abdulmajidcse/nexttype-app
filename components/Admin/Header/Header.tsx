@@ -3,7 +3,7 @@ import HeaderBrand from "@/components/Admin/Header/HeaderBrand";
 import SidebarMenuButton from "@/components/Admin/Header/SidebarMenuButton";
 import VisitSiteLink from "@/components/Admin/Header/VisitSiteLink";
 import HeaderSearchbar from "@/components/Admin/Header/HeaderSearchbar";
-import DarkTheme from "@/components/Admin/Header/DarkTheme";
+import DarkTheme from "@/components/Admin/DarkTheme";
 import TopbarMenuToggleButton from "@/components/Admin/Header/TopbarMenuToggleButton";
 import HeaderMainMenu from "@/components/Admin/Header/HeaderMainMenu";
 

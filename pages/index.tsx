@@ -11,7 +11,9 @@ const Home: NextPageWithLayout = () => {
         <title>{`Home - ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
       </Head>
 
-      <h2>Welcome to {process.env.NEXT_PUBLIC_APP_NAME}</h2>
+      <h2 className="text-xl">
+        Welcome to NextJS & TailwindCSS Admin Template
+      </h2>
       <Link
         href="auth"
         className="text-blue-500 hover:underline hover:text-yellow-500"

@@ -42,14 +42,14 @@ export default function Aside() {
                     icon={faCircleDot}
                     topLinkIs={false}
                     active={false}
-                    href="/auth"
+                    href="/auth/register"
                   />
                   <SidebarLink
                     name="Login"
                     icon={faCircleDot}
                     topLinkIs={false}
                     active={false}
-                    href="/auth"
+                    href="/auth/login"
                   />
                 </>
               </SidebarDropdown>
